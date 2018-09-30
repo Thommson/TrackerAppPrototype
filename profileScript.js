@@ -21,7 +21,7 @@ function BMICalc(){
     if(BMI >= 18.5 && BMI <= 25 ) BMIstatus.innerText = ' Healthy ';
     if(BMI >= 25 && BMI <= 30 ) BMIstatus.innerText = BMI + ' Overweight ';
     if(BMI > 30) BMIstatus.innerText = ' Obese ';
-    
+
     BMIstatus.innerText += ' ';
 
 }
@@ -36,7 +36,7 @@ function sleepSat(){
 window.addEventListener('load', () => {
     var request = new XMLHttpRequest();
 
-    request.open("GET", "http://127.0.0.1:3000/api/profile");
+    request.open("GET", "http://trackerapp9.herokuapp.com/api/profile");
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.setRequestHeader("x-auth-token", localStorage.getItem('x-auth-token'));
     request.onload = () => {
@@ -60,15 +60,15 @@ window.addEventListener('load', () => {
         function weightLoss(){
             document.getElementById('weightLossProgress').style.width = ((startWeight-currWeight)/(startWeight-targetWeight)*100).toString() + '%';
             weightLost.innerText = Number(startWeight-currWeight) + 'kg / ' + Number(startWeight-targetWeight) + 'kg';
-            
+
         }
-        
+
         function workout(){
             document.getElementById('workoutProgress').style.width = ((workoutCountThisMonth/targetWorkout)*100).toString() + '%';
             workoutsDone.innerText = workoutCountThisMonth.toString() + ' / ' + targetWorkout.toString() + ' workouts';
-        
+
         }
-    
+
         function waterGlassDrunk(){
             document.getElementById('waterGlassProgress').style.width = ((waterGlasses/8)*100).toString() + '%';
             wasserGlasses.innerText = waterGlasses.toString() + ' / 8' + ' glasses';

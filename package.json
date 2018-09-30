@@ -16,5 +16,13 @@
     "jsonwebtoken": "^8.3.0",
     "mssql": "^4.2.1",
     "router": "^1.3.3"
+  },
+  "engines": {
+    "node": "8.12.0"
+  },
+  "repository":  {
+    "type": "git",
+    "url": "https://github.com/Thommson/TrackerAppPrototype"
   }
+
 }

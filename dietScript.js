@@ -47,7 +47,7 @@ function getDietItems(){
   }
   document.getElementById('submitBtn').addEventListener('click', () => {
       let request = new XMLHttpRequest();
-      request.open('POST', 'http://127.0.0.1:3000/api/diet');
+      request.open('POST', 'http://trackerapp9.herokuapp.com/api/diet');
       request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       request.setRequestHeader("x-auth-token", localStorage.getItem('x-auth-token'));
       request.send(getDietItems());
