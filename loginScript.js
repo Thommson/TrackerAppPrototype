@@ -8,7 +8,7 @@ function getProfile(){
 
 document.getElementById('submitBtn').addEventListener('click', () => {
     let request = new XMLHttpRequest();
-    request.open('POST', 'http://trackerapp9.herokuapp.com/api/auth');
+    request.open('POST', 'https://trackerapp9.herokuapp.com/api/auth');
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.addEventListener('load', function () {
       localStorage.removeItem('x-auth-token');

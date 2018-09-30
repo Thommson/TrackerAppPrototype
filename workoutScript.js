@@ -22,7 +22,7 @@ function getWorkOut(){
 document.getElementById('workoutSubmit').addEventListener('click', function(){
     var request = new XMLHttpRequest();
 
-    request.open("POST", "http://trackerapp9.herokuapp.com/api/workout");
+    request.open("POST", "https://trackerapp9.herokuapp.com/api/workout");
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.setRequestHeader("x-auth-token", localStorage.getItem('x-auth-token'));
     //const jsonFormatted = getSleepHours();

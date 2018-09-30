@@ -18,7 +18,7 @@ function getSleepRating(){
 document.getElementById('sleepSubmit').addEventListener('click', function(){
     var request = new XMLHttpRequest();
 
-    request.open("POST", "http://trackerapp9.herokuapp.com/api/sleep");
+    request.open("POST", "https://trackerapp9.herokuapp.com/api/sleep");
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.setRequestHeader("x-auth-token", localStorage.getItem('x-auth-token'));
     //const jsonFormatted = getSleepHours();

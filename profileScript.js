@@ -36,7 +36,7 @@ function sleepSat(){
 window.addEventListener('load', () => {
     var request = new XMLHttpRequest();
 
-    request.open("GET", "http://trackerapp9.herokuapp.com/api/profile");
+    request.open("GET", "https://trackerapp9.herokuapp.com/api/profile");
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.setRequestHeader("x-auth-token", localStorage.getItem('x-auth-token'));
     request.onload = () => {
